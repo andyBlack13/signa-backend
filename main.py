@@ -16,7 +16,7 @@ origins = [
     "https://localhost.tiangolo.com",
     "http://localhost",
     "http://localhost:8080",
-    "https://signa-frontend.vercel.app/",
+    "https://signa-frontend.vercel.app",
 ]
 
 app.add_middleware(

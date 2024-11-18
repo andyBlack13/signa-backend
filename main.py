@@ -16,6 +16,7 @@ origins = [
     "https://localhost.tiangolo.com",
     "http://localhost",
     "http://localhost:8080",
+    "https://signa-frontend.vercel.app/",
 ]
 
 app.add_middleware(
@@ -139,53 +140,3 @@ def delete_brand(brand_id: int):
     global brands
     brands = [m for m in brands if m.id != brand_id]
     return {"detail": "Marca eliminada"}
-
-# app = FastAPI()
-
-# origins = [
-#     "http://localhost:3000",
-#     "http://localhost.tiangolo.com",
-#     "https://localhost.tiangolo.com",
-#     "http://localhost",
-#     "http://localhost:8080",
-# ]
-
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=origins,
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
-
-# brands = []  # Simulación de una base de datos en memoria
-
-# @app.post("/brands/", response_model=Brand)
-# def create_brand(brand: Brand):
-#     brands.append(brand)
-#     return brand
-
-# @app.get("/brands/", response_model=List[Brand])
-# def list_brands():
-#     return brands
-
-# @app.get("/brands/{brand_id}", response_model=Brand)
-# def get_brand(brand_id: int):
-#     brand = next((m for m in brands if m.id == brand_id), None)
-#     if brand is None:
-#         raise HTTPException(status_code=404, detail="Marca no encontrada")
-#     return brand
-
-# @app.put("/brands/{brand_id}", response_model=Brand)
-# def update_brand(brand_id: int, brand_updated: Brand):
-#     for i, m in enumerate(brands):
-#         if m.id == brand_id:
-#             brands[i] = brand_updated
-#             return brand_updated
-#     raise HTTPException(status_code=404, detail="Marca no encontrada")
-
-# @app.delete("/brands/{brand_id}")
-# def delete_brand(brand_id: int):
-#     global brands
-#     brands = [m for m in brands if m.id != brand_id]
-#     return {"detail": "Marca eliminada"}

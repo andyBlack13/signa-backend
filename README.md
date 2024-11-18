@@ -1,13 +1,13 @@
 # Signa Backend
 
-Este es el backend de la aplicación **Signa**. Está desarrollado en Python usando Flask (o el framework que uses).
+Este es el backend de la aplicación **Signa**. Está desarrollado en Python usando FastAPI.
 
 ## Instalación
 
 1. Clona el repositorio:
 
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
+    git clone https://github.com/andyBlack13/signa-backend.git
     cd signa-backend
 
 2. Crea y activa el entorno virtual:
